@@ -1,5 +1,31 @@
-name: PluginDemo
-main: com.briangershon.demo.App
-description: Plugin Demo
+name: rollCommand
+main: link.kmaba.rollCommand.App
+description: Execute random commands from predefined lists
 version: ${project.version}
 api-version: 1.20
+
+commands:
+  roll:
+    description: Execute a random command from the selected list
+    usage: /roll
+    aliases: [r]
+    permission: rollCommand.use
+    permission-message: You lack permission to use this.
+  rlist:
+    description: Manage command lists
+    usage: /rlist <list>
+    permission: rollCommand.admin
+    permission-message: You lack admin permission!
+  rtest:
+    description: Test roll commands without cooldown (Admin only)
+    usage: /rtest
+    permission: rollCommand.admin
+    permission-message: You lack admin permission!
+
+permissions:
+  rollCommand.use:
+    description: Allows using the roll command
+    default: true
+  rollCommand.admin:
+    description: Allows managing roll lists
+    default: op

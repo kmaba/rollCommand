@@ -1,0 +1,28 @@
+chosenList: exampleList
+
+commandLists:
+  diamondList:
+    cooldown: 120
+    commands:
+    - command: "/give %p diamond 64"
+      weight: 1
+    - command: "/give %p diamond_block 32"
+      weight: 2
+    - command: "/effect give %p haste 300 2"
+      weight: 3
+  exampleList:
+    cooldown: 60
+    commands:
+    - command: "/give %p diamond 1"
+      weight: 1
+    - command: "/say Hello, %p!"
+      weight: 2
+  funList:
+    cooldown: 30
+    commands:
+    - command: "/effect give %p jump_boost 30 3"
+      weight: 3
+    - command: "/effect give %p speed 30 2"
+      weight: 2
+    - command: "/give %p cookie 1"
+      weight: 1
